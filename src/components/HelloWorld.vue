@@ -8,6 +8,7 @@
         >vue-cli documentation</a
       >.
     </p>
+    <amplify-sign-out></amplify-sign-out>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>

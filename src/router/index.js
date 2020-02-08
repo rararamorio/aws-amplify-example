@@ -1,9 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { components, AmplifyEventBus, AmplifyPlugin } from "aws-amplify-vue";
+import { AmplifyEventBus, AmplifyPlugin } from "aws-amplify-vue";
 import * as AmplifyModules from "aws-amplify";
 
 import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import SampleAuth from "../views/SampleAuth";
 
 Vue.use(VueRouter);
 Vue.use(AmplifyPlugin, AmplifyModules);
@@ -49,17 +51,13 @@ const routes = [
   },
   {
     path: "/auth",
-    name: "Authenticator",
-    component: components.Authenticator
+    name: "sampleAuth",
+    component: SampleAuth
   },
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: About
   }
 ];
 
